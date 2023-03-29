@@ -5,6 +5,6 @@ describe('Welcome component',() => {
   test('render', () => {
     render(<Welcome />);
     
-    expect(screen.getByText("Welcome to the Albany Roller Derby")).toBeInTheDocument();
+    expect(screen.getByText(/Welcome to the Albany Roller Derby/i)).toBeInTheDocument();
   })
 });

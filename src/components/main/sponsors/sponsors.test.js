@@ -5,6 +5,6 @@ describe('Sponsors component',() => {
   test('render', () => {
     render(<Sponsors />);
     
-    expect(screen.getByText("Sponsors")).toBeInTheDocument();
+    expect(screen.getByText(/Sponsors/i)).toBeInTheDocument();
   })
 });

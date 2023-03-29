@@ -5,6 +5,6 @@ describe('News component',() => {
   test('render', () => {
     render(<News />);
     
-    expect(screen.getByText("Latest News")).toBeInTheDocument();
+    expect(screen.getByText(/Latest News/i)).toBeInTheDocument();
   })
 });

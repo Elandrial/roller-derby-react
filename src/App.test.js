@@ -5,15 +5,15 @@ describe('Core Component',() => {
   test('render', () => {
     render(<App />);
     
-    expect(screen.getByText("Home")).toBeInTheDocument();
-    expect(screen.getByText("Weather")).toBeInTheDocument();
-    expect(screen.getByText("Welcome to the Albanmy Roller Derby")).toBeInTheDocument();
-    expect(screen.getByText("Upcoming Events")).toBeInTheDocument();
-    expect(screen.getByText("Latest News")).toBeInTheDocument();
-    expect(screen.getByText("What is Roller Derby")).toBeInTheDocument();
-    expect(screen.getByText("Our Sponsors")).toBeInTheDocument();
-    expect(screen.getByText("Gallery")).toBeInTheDocument();
-    expect(screen.getByText("Merchandise")).toBeInTheDocument();
-    expect(screen.getByText("Contact Us")).toBeInTheDocument();
+    expect(screen.getAllByText(/Home/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Weather/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Welcome to the Albany Roller Derby/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Upcoming Events/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Latest News/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/What is Roller Derby/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Our Sponsors/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Gallery/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Merchandise/i)).not.toHaveLength(0);
+    expect(screen.getAllByText(/Contact Us/i)).not.toHaveLength(0);
   })
 });

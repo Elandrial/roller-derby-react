@@ -5,6 +5,6 @@ describe('Header component',() => {
   test('render', () => {
     render(<Header />);
     
-    expect(screen.getByText("Weather")).toBeInTheDocument();
+    expect(screen.getByText(/Weather/i)).toBeInTheDocument();
   })
 });

@@ -5,6 +5,6 @@ describe('Weather component',() => {
   test('render', () => {
     render(<Weather />);
     
-    expect(screen.getByText("Weather")).toBeInTheDocument();
+    expect(screen.getByText(/Weather/i)).toBeInTheDocument();
   })
 });

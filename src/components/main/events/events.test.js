@@ -5,6 +5,6 @@ describe('Events component',() => {
   test('render', () => {
     render(<Events />);
     
-    expect(screen.getByText("Upcoming Events")).toBeInTheDocument();
+    expect(screen.getByText(/Upcoming Events/i)).toBeInTheDocument();
   })
 });

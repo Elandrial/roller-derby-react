@@ -5,6 +5,6 @@ describe('Menu component',() => {
   test('render', () => {
     render(<Menu />);
     
-    expect(screen.getByText("Home")).toBeInTheDocument();
+    expect(screen.getByText(/Home/i)).toBeInTheDocument();
   })
 });

@@ -5,6 +5,6 @@ describe('Footer component',() => {
   test('render', () => {
     render(<Footer />);
     
-    expect(screen.getByText("Albany Roller Derby League 2023")).toBeInTheDocument();
+    expect(screen.getByText(/Albany Roller Derby League 2023/i)).toBeInTheDocument();
   })
 });

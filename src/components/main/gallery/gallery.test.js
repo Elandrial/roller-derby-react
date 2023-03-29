@@ -5,6 +5,6 @@ describe('Gallery component',() => {
   test('render', () => {
     render(<Gallery />);
     
-    expect(screen.getByText("Gallery")).toBeInTheDocument();
+    expect(screen.getByText(/Gallery/i)).toBeInTheDocument();
   })
 });

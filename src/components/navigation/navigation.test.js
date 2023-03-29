@@ -5,6 +5,6 @@ describe('Navigation component',() => {
   test('render', () => {
     render(<Navigation />);
     
-    expect(screen.getByText("Navigation")).toBeInTheDocument();
+    expect(screen.getByText(/Home/i)).toBeInTheDocument();
   })
 });

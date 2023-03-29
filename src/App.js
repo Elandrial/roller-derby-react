@@ -1,5 +1,9 @@
 import './App.css';
 import { ErrorBoundary } from "react-error-boundary";
+import Navigation from './components/navigation/navigation';
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Footer from './components/footer/footer';
 
 function fallbackRender({ error, resetErrorBoundary }) {
   return (
@@ -20,6 +24,10 @@ function App() {
         fallbackRender={fallbackRender}
         onError={logError}
       >
+        <Navigation />
+        <Header />
+        <Main />
+        <Footer />
       </ErrorBoundary>  
   );
 }

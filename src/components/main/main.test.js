@@ -5,6 +5,6 @@ describe('Main component',() => {
   test('render', () => {
     render(<Main />);
     
-    expect(screen.getByText("Main")).toBeInTheDocument();
+    expect(screen.getByText(/Welcome/i)).toBeInTheDocument();
   })
 });

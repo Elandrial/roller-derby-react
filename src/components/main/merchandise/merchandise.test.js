@@ -5,6 +5,6 @@ describe('Merchandise component',() => {
   test('render', () => {
     render(<Merchandise />);
     
-    expect(screen.getByText("Merchandise")).toBeInTheDocument();
+    expect(screen.getByText(/Merchandise/i)).toBeInTheDocument();
   })
 });

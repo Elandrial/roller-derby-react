@@ -5,6 +5,6 @@ describe('Sponsors component',() => {
   test('render', () => {
     render(<Contact />);
     
-    expect(screen.getByText("Contact Us")).toBeInTheDocument();
+    expect(screen.getByText(/Contact Us/i)).toBeInTheDocument();
   })
 });
