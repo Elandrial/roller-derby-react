@@ -1,4 +1,4 @@
-import Menu from "./Menu/Menu.js"
+import Menu from "./menu/menu.js"
 
 export default function Navigation(props) {
     return (

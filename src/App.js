@@ -4,6 +4,12 @@ import Navigation from './components/navigation/navigation';
 import Header from './components/header/header';
 import Main from './components/main/main';
 import Footer from './components/footer/footer';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+// This exports the whole icon packs for Brand and Solid.
+library.add(fab, fas)
 
 function fallbackRender({ error, resetErrorBoundary }) {
   return (

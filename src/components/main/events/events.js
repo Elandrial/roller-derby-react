@@ -1,3 +1,5 @@
+import ImageDerby from "../../../images/derby-program.jpg";
+
 export default function Events(props) {
     return (
         <section id="events">
@@ -5,7 +7,7 @@ export default function Events(props) {
 
                 <article className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>Integer laoreet ex nec purus posuere</h3>
@@ -18,7 +20,7 @@ export default function Events(props) {
 
                 <article className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>Integer laoreet ex nec purus posuere</h3>
@@ -31,7 +33,7 @@ export default function Events(props) {
 
                 <article className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>Integer laoreet ex nec purus posuere</h3>

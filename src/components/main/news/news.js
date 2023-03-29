@@ -1,10 +1,12 @@
+import ImageDerby from "../../../images/derby-program.jpg";
+
 export default function News(props) {
     return (
         <section id="news">
                 <h2>Latest News</h2>
                 <article className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>Curabitur porttitor libero neque</h3>
@@ -15,7 +17,7 @@ export default function News(props) {
                 </article>
                 <article className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>Aliquam erat volutpat</h3>
@@ -26,7 +28,7 @@ export default function News(props) {
                 </article>
                 <article className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>Cras risus nisi</h3>

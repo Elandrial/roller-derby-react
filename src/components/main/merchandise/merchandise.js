@@ -1,10 +1,12 @@
+import ImageDerby from "../../../images/derby-program.jpg";
+
 export default function Merchandise(props) {
     return (
         <section id="merchandise">
                 <h2>Merchandise</h2>
                 <div className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>[Title]</h3>
@@ -15,7 +17,7 @@ export default function Merchandise(props) {
                 </div>
                 <div className="detail-card">
                     <figure>
-                        <img src="images/derby-program.jpg" alt="Derby Program 2023"/>
+                        <img src={ImageDerby} alt="Derby Program 2023"/>
                     </figure>
                     <div>
                         <h3>[Title]</h3>

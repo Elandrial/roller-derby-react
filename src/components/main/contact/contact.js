@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export default function Contact(props) {
     return (
         <section id="contact">
@@ -33,15 +35,15 @@ export default function Contact(props) {
                     <h3>Follow us on Socials</h3>
                     <div id="social-icons">
                         <a href="https://www.facebook.com/albanyrollerderby/" target="_blank" alt="Albany Roller Derby's Facebook" rel="noreferrer">
-                            <i className="fa-brands fa-facebook" aria-hidden="true"></i>
+                            <span aria-hidden="true"><FontAwesomeIcon icon={['fab', 'facebook']}/></span>
                             <span className="sr-only">Albany Roller Derby's Facebook</span>
                         </a>
                         <a href="https://twitter.com/AlbanyDerby" target="_blank" rel="noreferrer">
-                            <i className="fa-brands fa-instagram" aria-hidden="true"></i>
+                            <span aria-hidden="true"><FontAwesomeIcon icon={['fab', 'instagram']} /></span>
                             <span className="sr-only">Albany Roller Derby's Instagram</span>
                         </a>
                         <a href="https://www.instagram.com/ardlwa/" target="_blank" rel="noreferrer">
-                            <i className="fa-brands fa-twitter" aria-hidden="true"></i>
+                            <span aria-hidden="true"><FontAwesomeIcon icon={['fab', 'twitter']} /></span>
                             <span className="sr-only">Albany Roller Derby's Twitter</span>
                         </a>
                     </div>
