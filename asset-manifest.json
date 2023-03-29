@@ -1,24 +1,31 @@
 {
   "files": {
-    "main.css": "/roller-derby-react/static/css/main.727a3ece.css",
-    "main.js": "/roller-derby-react/static/js/main.b0e0e83b.js",
+    "main.css": "/roller-derby-react/static/css/main.10ee69e4.css",
+    "main.js": "/roller-derby-react/static/js/main.0fec2158.js",
     "static/js/787.c50b56da.chunk.js": "/roller-derby-react/static/js/787.c50b56da.chunk.js",
+    "static/media/roller-bench.png": "/roller-derby-react/static/media/roller-bench.97462a4e5740d38520fb.png",
     "static/media/banner.webp": "/roller-derby-react/static/media/banner.ab82918f0fd03c89b341.webp",
     "static/media/ArchivoNarrow-Regular.ttf": "/roller-derby-react/static/media/ArchivoNarrow-Regular.109670bf74e02002820e.ttf",
+    "static/media/logo-albany-roller-derby.jpg": "/roller-derby-react/static/media/logo-albany-roller-derby.d8aba93340c1af1cd8b6.jpg",
     "static/media/ArchivoBlack-Regular.ttf": "/roller-derby-react/static/media/ArchivoBlack-Regular.c8c1218a52704b8a3097.ttf",
+    "static/media/derby-program.jpg": "/roller-derby-react/static/media/derby-program.5546ad515452926da239.jpg",
     "static/media/ArchivoNarrow-Regular.woff": "/roller-derby-react/static/media/ArchivoNarrow-Regular.7144e6afe91c4abafe94.woff",
     "static/media/ArchivoNarrow-Regular.eot": "/roller-derby-react/static/media/ArchivoNarrow-Regular.29c5bf8c9381d8c73a66.eot",
     "static/media/ArchivoBlack-Regular.woff": "/roller-derby-react/static/media/ArchivoBlack-Regular.006287d888d727a1da0e.woff",
     "static/media/ArchivoNarrow-Regular.woff2": "/roller-derby-react/static/media/ArchivoNarrow-Regular.c35dc4dda623a9d48a5d.woff2",
     "static/media/ArchivoBlack-Regular.eot": "/roller-derby-react/static/media/ArchivoBlack-Regular.07941fef41a7e7bfe751.eot",
+    "static/media/Combined-YACWALotterywest-Logos.webp": "/roller-derby-react/static/media/Combined-YACWALotterywest-Logos.96e1d4b916b612333d39.webp",
     "static/media/ArchivoBlack-Regular.woff2": "/roller-derby-react/static/media/ArchivoBlack-Regular.f74085802accffca412f.woff2",
+    "static/media/Logo-carsmart.webp": "/roller-derby-react/static/media/Logo-carsmart.7b872e6e8711685de25b.webp",
+    "static/media/Metro-Hotel-Perth_Horizontal_RGB.webp": "/roller-derby-react/static/media/Metro-Hotel-Perth_Horizontal_RGB.5f3dae8066db92d39e5a.webp",
+    "static/media/penrose.webp": "/roller-derby-react/static/media/penrose.33d02425eccce9fb114c.webp",
     "index.html": "/roller-derby-react/index.html",
-    "main.727a3ece.css.map": "/roller-derby-react/static/css/main.727a3ece.css.map",
-    "main.b0e0e83b.js.map": "/roller-derby-react/static/js/main.b0e0e83b.js.map",
+    "main.10ee69e4.css.map": "/roller-derby-react/static/css/main.10ee69e4.css.map",
+    "main.0fec2158.js.map": "/roller-derby-react/static/js/main.0fec2158.js.map",
     "787.c50b56da.chunk.js.map": "/roller-derby-react/static/js/787.c50b56da.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.727a3ece.css",
-    "static/js/main.b0e0e83b.js"
+    "static/css/main.10ee69e4.css",
+    "static/js/main.0fec2158.js"
   ]
 }
