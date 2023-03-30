@@ -1,38 +1,519 @@
-.App {
+/*
+Colour Pallet
+- Colour 1: #006263
+- Colour 2: #990F74
+- Colour 3: #B9B7BD
+- Colour 4: #FFFFFF
+- Colour 5: #FBFAFC
+
+- Header Font: Archivo Black
+- Alternate Font: Archivo Narrow
+*/
+
+/* Fonts */
+@font-face {
+  font-family: "Archivo Black";
+  src: url('./fonts/Archivo-Black/eot/ArchivoBlack-Regular.eot');
+  src: url('./fonts/Archivo-Black/eot/ArchivoBlack-Regular.eot') format('embedded-opentype'),
+       url('./fonts/Archivo-Black/woff2/ArchivoBlack-Regular.woff2') format('woff2'),
+       url('./fonts/Archivo-Black/woff/ArchivoBlack-Regular.woff') format('woff'),
+       url('./fonts/Archivo-Black/ttf/ArchivoBlack-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Archivo Narrow";
+    src: url('./fonts/Archivo-Narrow/eot/ArchivoNarrow-Regular.eot');
+    src: url('./fonts/Archivo-Narrow/eot/ArchivoNarrow-Regular.eot') format('embedded-opentype'),
+         url('./fonts/Archivo-Narrow/woff2/ArchivoNarrow-Regular.woff2') format('woff2'),
+         url('./fonts/Archivo-Narrow/woff/ArchivoNarrow-Regular.woff') format('woff'),
+         url('./fonts/Archivo-Narrow/ttf/ArchivoNarrow-Regular.ttf') format('truetype');
+  }
+/*@font-face {
+      font-family: "Archivo";
+      src: url('../fonts/Archivo/eot/Archivo-Regular.eot');
+      src: url('../fonts/Archivo/eot/Archivo-Regular.eot') format('embedded-opentype'),
+          url('../fonts/Archivo/woff2/Archivo-Regular.woff2') format('woff2'),
+          url('../fonts/Archivo/Archivo-Regular.woff') format('woff'),
+          url('../fonts/Archivo/Archivo-Regular.ttf') format('truetype');
+  }*/
+/* End - Fonts*/
+
+/* Core */
+body{
+  margin-left:0px;
+  margin-right:0px;
+  margin-top: 70px;
+  margin-bottom:0px;
+  font-family: 'Archivo Narrow', Verdana, Geneva, Tahoma, sans-serif;
+}
+* {
+  font-family: 'Archivo Narrow', Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+  color: #006263;
+  text-decoration: none;
+}
+a:hover{
+  color: #990F74;
+}
+h1, h2{
+  font-family: 'Archivo Black', Verdana, Geneva, Tahoma, sans-serif;
+}
+h3,h4,h5{
+  margin: 10px 0 10px 0;
+}
+address{
+  font-style: normal;
+}
+button{
+  font-size: 18px;
+  color: #006263;
+  background-color: #fff;
+  border: 2px solid #006263;
+  border-radius: 4px;
+  padding: 6px;
+}
+button:hover{
+  color: #990F74;
+  border-color: #990F74;
+  cursor: pointer;
+}
+button:disabled{
+  border-color:#B9B7BD;
+  color: #B9B7BD;
+}
+.alternate-background{
+  background-color: #006263;
+  color: #FFF;
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.2);
+}
+.alternate-background a{
+  color: #B9B7BD;
+}
+.alternate-background a:hover{
+  color: #990F74;
+}
+label{
+  font-weight: 800;
+}
+/* End - Core*/
+
+/* Components */
+.split-content{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr)
+}
+.relative-content{
+  position: relative;
+}
+.content-section{
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 40px;
+  padding-top: 5px;
+}
+.detail-card{
+  display: flex;
+  box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.1);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+}
+.detail-card div{
+  text-align: left;
+}
+.detail-card img{
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+.detail-card button{
+  font-size: 18px;
+  padding-left:20px;
+  padding-right: 20px;
+}
+.page-control{
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+.page-control > button{
+  font-weight: 800;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* End - Components*/
+
+/* Nav Bar */
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+  background-color: #fff;
+  z-index: 100;
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin:0;
+  padding-right: 20px;
+}
+nav li{
+  position: relative;
+  text-align: center;
+  display: block; 
+  width: auto;
+  font-size: 16px;
+  line-height: 24px;
+}
+nav .fa-solid, nav span{
+  display: block;
+  font-size: 22px;
+}
+nav a{
+  text-decoration: none;
+  border-top: solid 3px #B9B7BD;
+  display: block;
+  padding-bottom: 5px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 10px;
+  margin: 0;
+  margin-top:2px;
+}
+nav a:hover{
+  border-color: #990F74;
+}
+/* End - Nav Bar */
+
+/* Logo */
+#logo{
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  background-color: #FFF;
+  border-radius: 0 0 100px 100px;
+  overflow: hidden;
+  z-index: 20;
+}
+#logo figure{
+  margin:0;
+  padding:0;
+  background-color: transparent;
+}
+#logo img{
+  height: 290px;
+  width: 316px;
+}
+/* End - Logo */
+
+/* Banner */
+#banner{
+  height: 600px;
+  background-image: url(./images/banner.webp);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  opacity: 0.5;
+}
+/* End - Banner */
+
+/* Weather */
+#weather{
+  position: absolute;
+  bottom: 0px;
+  right: 20px;
+  background-color: #FFF;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  width: 400px;
+  z-index: 20;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 30px;
+}
+#weather-today{
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+#weather-today span {
+  display:inline-block;
+}
+#weather-today i, 
+#weather-today-temp{
+  font-size: 48px;
+}
+#weather-today i{
+  margin-right: 10px;
+}
+#weather-today .weather-metric{
+  margin-top:10px;
+  vertical-align: top;
+}
+
+#weather-forecast{
+  display: flex;
+}
+#weather-forecast .weather-day{
+  flex: 1 0 0%;
+}
+.weather-day{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-day i, 
+.weather-day-name{
+  display: block;
+}
+.weather-day i{
+  font-size: 42px;
+  margin-top: 4px;
+  margin-bottom:4px;
+}
+.weather-day-temp-like{
+  color: #555;
+}
+#weather .fa-bolt{
+  color: rgb(255,215,0);
+}
+#weather .fa-cloud-drizzle{
+  color: rgb(0, 162, 255);
+}
+#weather .fa-cloud-showers-heavy{
+  color: rgb(4, 41, 116);
+}
+#weather .fa-snowflakes{
+  color: #02e8f0;
+}
+#weather .fa-cloud-fog{
+  color: #CCC;
+}
+#weather .fa-smoke{
+  color: #AAA;
+}
+#weather .fa-sun-haze{
+  color: rgb(255,215,0);
+}
+#weather .fa-sun-dust{
+  color: rgb(255,215,0);
+}
+#weather .fa-cloud-fog{
+  color: #CCC;
+}
+#weather .fa-tornado{
+  color: #222;
+}
+#weather .fa-sun{
+  color: rgb(255,215,0);
+}
+#weather .fa-cloud{
+  color: #AAA;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* End - Weather */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Welcome */
+#welcome{
+  text-align: center;
+}
+/* End - Welcome */
+
+/* Events */
+#events{
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* End - Events */
+
+/* News */
+#news{
+  text-align: center;
+  margin-bottom:30px;
+}
+/* End - News */
+
+/* About */
+#about{
+  text-align: center;
+  flex-flow: row;
+}
+#about-video{
+  flex-grow: 1;
+}
+#about-video iframe{
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 16 / 9;
+}
+#about-detail{
+  padding-left: 20px;
+  flex-grow: 1;
+  text-align: left;
+}
+/* End - About */
+
+/* Sponsors */
+#sponsors{
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #006263;
+}
+#sponsor-logos{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+#sponsor-logos > div{
+  vertical-align: middle;
+  flex: 1 0 0%;
+}
+#sponsor-logos img{
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width:300px;
+}
+/* End - Sponsors */
+
+/* Gallery */
+#gallery{
+  text-align: center;
+  padding-bottom: 20px;
+}
+#gallery-active img{
+  width: 80%;
+  height: auto;
+  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+#gallery-carousel{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+}
+#gallery-carousel img{
+  align-items: center;
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
+/* End - Gallery */
+
+/* Merchandise */
+#merchandise{
+  text-align: center;
+  padding-bottom: 20px;
+}
+/* End - Merchandise */
+
+
+/* Contact */
+#contact{
+  border-top: solid 1px #006263;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+#social-icons span{
+  font-size: 48px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#contact-form{
+  text-align: center;
+}
+#contact-form p{
+  margin-bottom: 40px;
+}
+#contact-form > div{
+  margin-bottom:5px;
+}
+#contact-form label{
+  font-size: 18px;
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+}
+#contact-form input, 
+#contact-form textarea, 
+#contact-form select{
+  font-size: 16px;
+  border: solid 1px #006263;
+  padding: 2px;
+  width: 300px;
+}
+#contact-form button{
+  margin-left: 110px;
+  width: 310px;
+}
+#contact-form .required-field{
+  color: #f00;
+  font-size: 22px;
 }
 
-.App-link {
-  color: #61dafb;
+#contact-details iframe{
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 16 / 9;
+  border: 0 none;
 }
+/* End - Contact */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+/* Footer */
+#footer{
+  text-align: center;
+  padding-bottom: 10px;
+}
+/* End - Footer */
+
+/* Extra Small resolution overrides: 320px */
+@media screen and (max-width: 320){
+  .hidden-xs{
+      display: none;
   }
 }
+/* End - Extra Small resolution overrides: 320px */
+
+/* Small resolution overrides: 480px */
+@media screen and (max-width: 480px){
+  .hidden-s{
+      display: none;
+  }
+}
+/* End - Small resolution overrides: 480px */
+
+/* Medium resolution overrides: 768px */
+@media screen and (max-width: 768px){
+  .hidden-m{
+      display: none;
+  }
+  .split-content{
+      display: block;
+      grid-auto-flow: none;
+  }
+  
+  #contact-form button{
+      margin-left: 0;
+  }
+}
+/* End - Medium resolution overrides: 768px */
+
+/* Large resolution overrides: 992px */
+@media screen and (max-width: 992px){
+  .hidden-l{
+      display: none;
+  }
+}
+/* End - Large resolution overrides: 992px */
+
+/* Extra Large resolution overrides: 1200px */
+/* End - Extra Large resolution overrides: 1200px */

@@ -1,25 +1,40 @@
-import { Link } from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
+import { ErrorBoundary } from "react-error-boundary";
+import Navigation from './components/navigation/navigation';
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Footer from './components/footer/footer';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+
+// This exports the whole icon packs for Brand and Solid.
+library.add(fab, fas)
+
+function fallbackRender({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre style={{ color: "red" }}>{error.message}</pre>
+    </div>
+  );
+}
+
+const logError = (error, info) => {
+  // TODO: Do something with the error
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ErrorBoundary
+        fallbackRender={fallbackRender}
+        onError={logError}
+      >
+        <Navigation />
+        <Header />
+        <Main />
+        <Footer />
+      </ErrorBoundary>  
   );
 }
 
