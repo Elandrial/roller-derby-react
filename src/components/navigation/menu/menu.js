@@ -1,16 +1,36 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ErrorBoundary } from "react-error-boundary";
+import menuData from '../../../data/menu.json';
+
+function fallbackRender({ error, resetErrorBoundary }) {
+  return (
+    <div role="alert">
+      <p>Something went wrong:</p>
+      <pre style={{ color: "red" }}>{error.message}</pre>
+    </div>
+  );
+}
+
+const logError = (error, info) => {
+  // TODO: Do something with the error
+};
 
 export default function Menu(props) {
+    function MenuItem({id,key=id, link, icon, name}){
+        return (
+            <li key={id}><a href={link}><span aria-hidden="true"><FontAwesomeIcon icon={['fas', icon]} /></span>{name}</a></li>
+        );
+    }
+
     return (
+        <ErrorBoundary
+            fallbackRender={fallbackRender}
+            onError={logError}
+          >
         <ul>
-            <li><a href="#banner"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'home']} /></span>Home</a></li>
-            <li><a href="#events"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'calendar-day']} /></span>Events</a></li>
-            <li><a href="#news"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'newspaper']} /></span>News</a></li>
-            <li><a href="#about"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'skating']} /></span>About</a></li>
-            <li><a href="#sponsors"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'medal']} /></span>Sponsors</a></li>
-            <li><a href="#gallery"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'camera']} /></span>Gallery</a></li>
-            <li><a href="#merchandise"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'tshirt']} /></span>Merch</a></li>
-            <li><a href="#contact"><span aria-hidden="true"><FontAwesomeIcon icon={['fas', 'comment']} /></span>Contact</a></li>
+            
+            {menuData.map(MenuItem)}
         </ul>
+        </ErrorBoundary>
     );
   }

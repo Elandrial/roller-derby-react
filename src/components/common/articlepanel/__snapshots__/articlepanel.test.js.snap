@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pager component renders correctly 1`] = `
+Array [
+  <article
+    className="detail-card"
+  >
+    <figure>
+      <img
+        alt="Integer laoreet ex nec purus posuere"
+        src="/images/derby-program.jpg"
+      />
+    </figure>
+    <div>
+      <h3>
+        Integer laoreet ex nec purus posuere
+      </h3>
+      <time>
+        1st April 2022
+      </time>
+      <p>
+        Nullam maximus efficitur dapibus. Nulla facilisi. Proin mollis enim quis efficitur elementum. Nullam eget gravida quam. Vivamus vel urna vestibulum, aliquam ligula tempor, congue augue.
+      </p>
+      <button
+        onClick={[Function]}
+      >
+        Read More
+      </button>
+    </div>
+  </article>,
+  <div
+    className="page-control"
+  >
+    <button
+      aria-label="Go to previous Test page"
+      disabled={true}
+      onClick={[Function]}
+    >
+      &lt;
+    </button>
+    <button
+      aria-current="true"
+      aria-label="Current Test Page, Page 1"
+      className=""
+      disabled={true}
+      onClick={[Function]}
+    >
+      1
+    </button>
+    <button
+      aria-label="Go to next Test page"
+      disabled={true}
+      onClick={[Function]}
+    >
+      &gt;
+    </button>
+  </div>,
+]
+`;

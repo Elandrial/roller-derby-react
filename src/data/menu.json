@@ -1,0 +1,50 @@
+[
+    {
+        "id":1,
+        "name": "Home",
+        "icon": "home",
+        "link": "#banner"
+    },
+    {
+        "id":2,
+        "name": "Events",
+        "icon": "calendar-day",
+        "link": "#events"
+    },
+    {
+        "id":3,
+        "name": "News",
+        "icon": "newspaper",
+        "link": "#news"
+    },
+    {
+        "id":4,
+        "name": "About",
+        "icon": "skating",
+        "link": "#about"
+    },
+    {
+        "id":5,
+        "name": "Sponsors",
+        "icon": "medal",
+        "link": "#sponsors"
+    },
+    {
+        "id":6,
+        "name": "Gallery",
+        "icon": "camera",
+        "link": "#gallery"
+    },
+    {
+        "id":7,
+        "name": "Merch",
+        "icon": "tshirt",
+        "link": "#merchandise"
+    },
+    {
+        "id":8,
+        "name": "Contact",
+        "icon": "comment",
+        "link": "#contact"
+    }
+]

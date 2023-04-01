@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pager component renders correctly 1`] = `
+<div
+  className="page-control"
+>
+  <button
+    aria-label="Go to previous Events page"
+    disabled={true}
+    onClick={[Function]}
+  >
+    &lt;
+  </button>
+  <button
+    aria-current="true"
+    aria-label="Current Events Page, Page 1"
+    className=""
+    disabled={true}
+    onClick={[Function]}
+  >
+    1
+  </button>
+  <button
+    aria-current="true"
+    aria-label="Go to Events page 2"
+    className=""
+    disabled={false}
+    onClick={[Function]}
+  >
+    2
+  </button>
+  <button
+    aria-current="true"
+    aria-label="Go to Events page 3"
+    className=""
+    disabled={false}
+    onClick={[Function]}
+  >
+    3
+  </button>
+  <button
+    aria-current="true"
+    aria-label="Go to Events page 4"
+    className="hidden-m hidden-s hidden-xs"
+    disabled={false}
+    onClick={[Function]}
+  >
+    4
+  </button>
+  <button
+    aria-current="true"
+    aria-label="Go to Events page 5"
+    className="hidden-l hidden-m hidden-s hidden-xs"
+    disabled={false}
+    onClick={[Function]}
+  >
+    5
+  </button>
+  <button
+    aria-label="Go to next Events page"
+    disabled={false}
+    onClick={[Function]}
+  >
+    &gt;
+  </button>
+</div>
+`;
