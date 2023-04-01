@@ -1,3 +1,8 @@
+
+/**
+ * 
+ * Generates the basic about content
+ */
 export default function About(props) {
     return (
         <section id="about" className="content-section alternate-background">

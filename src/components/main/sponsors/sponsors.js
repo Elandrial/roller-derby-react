@@ -1,6 +1,11 @@
 import Sponsor from './sponsor/sponsor';
 import dataSponsors from '../../../data/sponsors.json';
 
+/**
+ * 
+ * Generates the Sponsors content, as loaded from a JSON file
+ * TODO: Add an overlay that shows more details about the sponsor
+ */
 export default function Sponsors(props) {
     return (
         <section id="sponsors">

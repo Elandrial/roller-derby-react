@@ -1,3 +1,8 @@
+
+/**
+ * 
+ * Creates a Generic Article card for use with the Article Panel component 
+ */
 export default function Article({id,key=id, title, date, description, image, onButtonPress=(id)=>{}}){
     function onClick(){
         onButtonPress(id);

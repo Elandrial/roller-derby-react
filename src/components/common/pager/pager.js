@@ -2,6 +2,10 @@ import { useState } from "react";
 import PageButton from './PageButton/pagebutton';
 import * as common from "../../../utility/common";
 
+/**
+ * 
+ * A control that takes renders buttons to control paged content including next and previous
+ */
 export default function Pager(props) {
     const [currentPage, setCurrentPage] = useState(1);
     //set defaults

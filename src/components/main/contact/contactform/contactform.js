@@ -1,5 +1,9 @@
 import { useForm } from 'react-hook-form'; //https://react-hook-form.com/form-builder
 
+/**
+ * 
+ * Generates the contact form for user input, currently validates and generates an alert with the JSON output 
+ */
 export default function Contact(props) {
     const { register, handleSubmit, formState: { errors } } = useForm({mode:"onBlur"});
     const onSubmit = data => {

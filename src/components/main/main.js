@@ -8,6 +8,10 @@ import Gallery from "./gallery/gallery.js";
 import Merchandise from "./merchandise/merchandise.js";
 import Contact from "./contact/contact.js";
 
+/**
+ * 
+ * Generates the container content for the main section, composed of the components: Welcome, Events, News, About, Sponsors, Gallery, Merchandise, and Contact
+ */
 export default function Main(props) {
     return (
         <React.Fragment>

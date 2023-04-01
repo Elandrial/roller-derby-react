@@ -1,3 +1,8 @@
+
+/**
+ * 
+ * Generates the basic footer content to displayed at the bottom of the page 
+ */
 export default function Footer(props) {
     return (
         <footer id="footer" className="content-section alternate-background">

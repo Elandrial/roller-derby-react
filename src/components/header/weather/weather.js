@@ -4,6 +4,10 @@ import React, { useEffect } from 'react';
 import Today from './today/today';
 import Weekday from './weekday/weekday';
 
+/**
+ * 
+ * Generates the a weather forecast panel based on the output from an API call, uses Today and Weekday components to render the data 
+ */
 export default function Weather(props) {
     useEffect(getForecast, []);
     const [forecast, setForecast] = React.useState({

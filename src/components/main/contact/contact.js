@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactForm from './contactform/contactform';
 
+/**
+ * 
+ * Generates the basic contact content and the ContactForm Component 
+ */
 export default function Contact(props) {
     return (
         <section id="contact">

@@ -2,7 +2,10 @@ import { Carousel } from 'react-responsive-carousel';
 import galleryData from '../../../data/gallery.json';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-
+/**
+ * 
+ * Generates the a gallery based on data from a JSON file using the third-party Carousel component
+ */
 export default function Gallery(props) {
     return (
         <section id="gallery">
