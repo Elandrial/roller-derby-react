@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pager component renders correctly 1`] = `
+<div>
+  <img
+    alt="test"
+    src="/images/testimage.jpg"
+  />
+</div>
+`;

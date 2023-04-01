@@ -1,22 +1,23 @@
-import ImageBench from "../../../images/roller-bench.png";
+import { Carousel } from 'react-responsive-carousel';
+import galleryData from '../../../data/gallery.json';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
 
 export default function Gallery(props) {
     return (
         <section id="gallery">
-                <h2>Gallery</h2>
-                <div id="gallery-active">
-                    <figure>
-                        <img src={ImageBench} alt="Ready for the roller session"/>
-                        <figcaption>Ready for the roller Session</figcaption>
-                    </figure>
-                </div>
-                <div id="gallery-carousel">
-                    <img src={ImageBench} alt="Thumbnail: Ready for the roller session"/>
-                    <img src={ImageBench} alt="Thumbnail: Ready for the roller session"/>
-                    <img src={ImageBench} alt="Thumbnail: Ready for the roller session"/>
-                    <img src={ImageBench} alt="Thumbnail: Ready for the roller session" className="hidden-m"/>
-                    <img src={ImageBench} alt="Thumbnail: Ready for the roller session" className="hidden-l"/>
-                </div>
-            </section>
+            <h2>Gallery</h2>
+            <Carousel>
+                {
+                    galleryData.map((data)=>{
+                    return (
+                        <div key={data.id}>
+                            <img src={process.env.PUBLIC_URL + "/images/" + data.image} alt={data.title}/>
+                            <p className="legend">{data.title}</p>
+                        </div>
+                    );
+                })}
+            </Carousel>
+        </section>
     );
   }

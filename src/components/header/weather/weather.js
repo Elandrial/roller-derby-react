@@ -1,42 +1,106 @@
+import { ErrorBoundary } from "react-error-boundary";
+import * as WeatherAPI from '../../../utility/weather/weather';
+import React, { useEffect } from 'react';
+import Today from './today/today';
+import Weekday from './weekday/weekday';
+
 export default function Weather(props) {
-    return (
-        <aside id="weather">
-            <h2>Weather</h2>
-            <div id="weather-today">
-                <i id="weather-today-icon" className="fa-solid fa-question"></i>
-                <span id="weather-today-sr" className="sr-only">???</span>
-                <span id="weather-today-temp">00</span><span className="weather-metric">&deg;C</span>
-            </div>
-            <div id="weather-forecast">
-                <div id="weather-day-1" className="weather-day">
-                    <span id="weather-day-1-name" className="weather-day-name">???</span>
-                    <i id="weather-day-1-icon" className="fa-solid fa-sun"></i>
-                    <span id="weather-day-1-sr" className="sr-only">???</span>
-                    <span id="weather-day-1-temp" className="weather-day-temp">00&deg;C</span>
-                    <span id="weather-day-1-temp-like" className="weather-day-temp-like" title="feels like"> | 00&deg;C</span>
+    useEffect(getForecast, []);
+    const [forecast, setForecast] = React.useState({
+            today: {
+                main:"",
+                temp:0,
+                },
+            weekdays:[{
+                    id:1,
+                    main:"",
+                    date:new Date(),
+                    temp:0,
+                    tempLike:0
+                },
+                {
+                    id:2,
+                    main:"",
+                    date:new Date(),
+                    temp:0,
+                    tempLike:0
+                },
+                {
+                    id:3,
+                    main:"",
+                    date:new Date(),
+                    temp:0,
+                    tempLike:0
+                },
+                {
+                    id:4,
+                    main:"",
+                    date:new Date(),
+                    temp:0,
+                    tempLike:0
+                }
+            ]
+        });
+
+    function getForecast(){
+        WeatherAPI.getForecast()
+            .then((data) => {
+                let fc = {
+                    today:{},
+                    weekdays:[]
+                };
+                fc.today.main = data[0].weather[0].main;
+                fc.today.temp = Math.round(data[0].main.temp)
+                for(let i=1; i <= Math.min(data.length,4); i++){
+                    fc.weekdays.push({
+                        id: i,
+                        main : data[i].weather[0].main,
+                        date : new Date(data[i].dt_txt),
+                        temp : Math.round(data[i].main.temp),
+                        tempLike : Math.round(data[i].main.feels_like)
+                    });
+                }
+                setForecast(fc);
+            });
+    }
+    
+    function fallbackRender({ error, resetErrorBoundary }) {
+        return (
+        <div role="alert">
+            <p>Something went wrong:</p>
+            <pre style={{ color: "red" }}>{error.message}</pre>
+        </div>
+        );
+    }
+
+    const logError = (error, info) => {
+      // TODO: Do something with the error
+    };
+
+    if(forecast !== undefined){
+        return (
+        <ErrorBoundary
+            fallbackRender={fallbackRender}
+            onError={logError}
+        >
+            <aside id="weather">
+                <h2>Weather</h2>
+                <Today data={forecast.today} />
+                <div id="weather-forecast" key="weather-forecast">
+                    {
+                        forecast["weekdays"].map((data) => {
+                            return (<Weekday data={data} key={data.id}/>);
+                        })
+                    }
                 </div>
-                <div id="weather-day-2" className="weather-day">
-                    <span id="weather-day-2-name" className="weather-day-name">???</span>
-                    <i id="weather-day-2-icon" className="fa-solid fa-sun"></i>
-                    <span id="weather-day-2-sr" className="sr-only">???</span>
-                    <span id="weather-day-2-temp" className="weather-day-temp">00&deg;C</span>
-                    <span id="weather-day-2-temp-like" className="weather-day-temp-like" title="feels like"> | 00&deg;C</span>
-                </div>
-                <div id="weather-day-3" className="weather-day">
-                    <span id="weather-day-3-name" className="weather-da-name">???</span>
-                    <i id="weather-day-3-icon" className="fa-solid fa-sun"></i>
-                    <span id="weather-day-3-sr" className="sr-only">???</span>
-                    <span id="weather-day-3-temp" className="weather-day-temp">00&deg;C</span>
-                    <span id="weather-day-3-temp-like" className="weather-day-temp-like" title="feels like"> | 00&deg;C</span>
-                </div>
-                <div id="weather-day-4" className="weather-day">
-                    <span id="weather-day-4-name" className="weather-day-name">???</span>
-                    <i id="weather-day-4-icon" className="fa-solid fa-sun"></i>
-                    <span id="weather-day-4-sr" className="sr-only">???</span>
-                    <span id="weather-day-4-temp" className="weather-day-temp">00&deg;C</span>
-                    <span id="weather-day-4-temp-like" className="weather-day-temp-like" title="feels like"> | 00&deg;C</span>
-                </div>
-            </div>
-        </aside>
-    );
+            </aside>
+            </ErrorBoundary>
+        );
+    }
+    else{
+        return (
+            <aside id="weather">
+                <h2>Weather</h2>
+            </aside>);
+    }
   }

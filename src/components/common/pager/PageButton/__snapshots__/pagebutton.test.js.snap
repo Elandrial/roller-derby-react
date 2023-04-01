@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageButton component Page 1, current button renders correctly 1`] = `
+<button
+  aria-current="true"
+  aria-label="Current Events Page, Page 1"
+  className=""
+  disabled={true}
+  onClick={[Function]}
+>
+  1
+</button>
+`;
+
+exports[`PageButton component Page 2, not current button renders correctly 1`] = `
+<button
+  aria-current="true"
+  aria-label="Go to Events page 2"
+  className=""
+  disabled={false}
+  onClick={[Function]}
+>
+  2
+</button>
+`;
+
+exports[`PageButton component Page 6, not current button renders correctly, hidden on LG, MD 1`] = `
+<button
+  aria-current="true"
+  aria-label="Go to Events page 6"
+  className="hidden-l hidden-m"
+  disabled={false}
+  onClick={[Function]}
+>
+  6
+</button>
+`;

@@ -245,7 +245,8 @@ nav a:hover{
   display:inline-block;
 }
 #weather-today i, 
-#weather-today-temp{
+#weather-today-temp,
+#weather-today svg{
   font-size: 48px;
 }
 #weather-today i{
@@ -262,14 +263,17 @@ nav a:hover{
 #weather-forecast .weather-day{
   flex: 1 0 0%;
 }
-.weather-day{
+.weather-day,
+.weather-icon{
   text-align: center;
 }
 .weather-day i, 
-.weather-day-name{
+.weather-day-name,
+.weather-icon{
   display: block;
 }
-.weather-day i{
+.weather-day i, 
+.weather-day svg{
   font-size: 42px;
   margin-top: 4px;
   margin-bottom:4px;
@@ -386,24 +390,7 @@ nav a:hover{
 /* Gallery */
 #gallery{
   text-align: center;
-  padding-bottom: 20px;
-}
-#gallery-active img{
-  width: 80%;
-  height: auto;
-  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
-}
-#gallery-carousel{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 10px;
-}
-#gallery-carousel img{
-  align-items: center;
-  width: 100%;
-  height: auto;
-  max-width: 100px;
+  padding: 20px;
 }
 /* End - Gallery */
 
@@ -451,13 +438,29 @@ nav a:hover{
   padding: 2px;
   width: 300px;
 }
-#contact-form button{
+#contact-form textarea{
+  margin-top: 2px;
+}
+#contact-form button,
+#contact-form input[type="submit"]{
   margin-left: 110px;
   width: 310px;
 }
 #contact-form .required-field{
   color: #f00;
   font-size: 22px;
+}
+#contact-form .input-invalid{
+  border-color: #f00;
+  border-left-width: 4px;
+}
+#contact-form .input-error{
+  margin:0;
+  padding:0;
+}
+#contact-form .input-error::before {
+  display: inline;
+  content: "⚠ ";
 }
 
 #contact-details iframe{

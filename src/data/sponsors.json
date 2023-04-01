@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"Lotterywest and YACWA",
+        "image":"Combined-YACWALotterywest-Logos.webp",
+        "details":""
+    },
+    {
+        "id":2,
+        "name":"CarSmart Albany",
+        "image":"Logo-carsmart.webp",
+        "details":""
+    },
+    {
+        "id":3,
+        "name":"Metro Hotel Perth",
+        "image":"Metro-Hotel-Perth_Horizontal_RGB.webp",
+        "details":""
+    },
+    {
+        "id":4,
+        "name":"Penrose Professional Bookkeeping",
+        "image":"penrose.webp",
+        "details":""
+    }
+]

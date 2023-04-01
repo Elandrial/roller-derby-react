@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ContactForm from './contactform/contactform';
 
 export default function Contact(props) {
     return (
@@ -7,29 +8,7 @@ export default function Contact(props) {
                 <div id="contact-form">
                     <h2>Contact Us</h2>
                     <p>Intersted in taking part in an upcoming event/program, or just have a question. Use the form below to send us a message and we will get back to you as soon as possible</p>
-                    <div>
-                        <label htmlFor="first_name">First Name <span className="required-field">*</span>: </label>
-                        <input type="text" placeholder="First Name" id="first_name"/>
-                    </div>
-                    <div>
-                        <label htmlFor="last_name">Last Name <span className="required-field">*</span>: </label>
-                        <input type="text" placeholder="Last Name" id="last_name"/>
-                    </div>
-                    <div>
-                        <label htmlFor="email">Email <span className="required-field">*</span>: </label>
-                        <input type="email" placeholder="Email" id="email"/>
-                    </div>
-                    <div>
-                        <label htmlFor="subject">Subject: </label>
-                        <input type="text" placeholder="Subject" id="subject"/>
-                    </div>
-                    <div>
-                        <label htmlFor="message">Message <span className="required-field">*</span>: </label>
-                        <textarea placeholder="Message" id="message"></textarea>
-                    </div>
-                    <div>
-                        <button>Send</button>
-                    </div>
+                    <ContactForm />
                 </div>
                 <div id="contact-details">
                     <h3>Follow us on Socials</h3>

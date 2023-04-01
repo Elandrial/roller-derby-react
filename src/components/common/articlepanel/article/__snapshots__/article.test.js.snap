@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pager component renders correctly 1`] = `
+<article
+  className="detail-card"
+>
+  <figure>
+    <img
+      alt="test case"
+      src="/images/derby-program.jpg"
+    />
+  </figure>
+  <div>
+    <h3>
+      test case
+    </h3>
+    <time>
+      1st April 2023
+    </time>
+    <p>
+      test example
+    </p>
+    <button
+      onClick={[Function]}
+    >
+      Read More
+    </button>
+  </div>
+</article>
+`;
