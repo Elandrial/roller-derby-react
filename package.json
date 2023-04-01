@@ -1,7 +1,7 @@
 {
   "name": "roller-derby-react",
   "homepage": "https://elandrial.GitHub.io/roller-derby-react",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",

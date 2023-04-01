@@ -4,6 +4,10 @@ import { useState } from "react";
 import Article from './article/article';
 import Pager from '../pager/pager';
 
+/**
+ * 
+ * Creates a Article Panel which displays a paged list of Article components (can be swapped out for a different template component)
+ */
 export default function ArticlePanel({
     jsondata,
     recordsPerPage=3,

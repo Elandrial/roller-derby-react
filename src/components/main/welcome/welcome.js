@@ -1,3 +1,8 @@
+
+/**
+ * 
+ * Generates the basic welcome content
+ */
 export default function Welcome(props) {
     return (
         <section id="welcome" className="content-section alternate-background">

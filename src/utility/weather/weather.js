@@ -1,3 +1,7 @@
+/**
+ * This provides the functionality required to interact with the OpenWeather API
+ */
+
 const options = {
     api: '16e3b60234fdcc79c62cef050072c516',
     days: 5,

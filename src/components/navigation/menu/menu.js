@@ -15,6 +15,10 @@ const logError = (error, info) => {
   // TODO: Do something with the error
 };
 
+/**
+ * 
+ * Generates the menu content based on a JSON file 
+ */
 export default function Menu(props) {
     function MenuItem({id,key=id, link, icon, name}){
         return (

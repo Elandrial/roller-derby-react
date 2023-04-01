@@ -21,6 +21,9 @@ const logError = (error, info) => {
   // TODO: Do something with the error
 };
 
+/**
+ * The main entry point to the application, renders the Navigation, header, main and footer components
+ */
 function App() {
   return (
     <ErrorBoundary

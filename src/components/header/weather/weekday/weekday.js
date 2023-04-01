@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { getFaIcon } from '../../../../utility/weather/weather';
 
+/**
+ * 
+ * Generates the weekday layout for the weather components
+ */
 export default function Weekday({data}){
     let dayName = data.date.toLocaleDateString('en-US', { weekday: 'long' });
     let dayTemp = data.temp;
